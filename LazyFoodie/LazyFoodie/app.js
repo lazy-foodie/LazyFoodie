@@ -10,7 +10,6 @@ var path = require('path');
 var yummly = require('yummly');
 var app = express();
 
-
 //
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -31,8 +30,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/about', routes.about);
-app.get('/contact', routes.contact);
+app.get('/fav', routes.about);
+app.get('/accountInfo', routes.contact);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
