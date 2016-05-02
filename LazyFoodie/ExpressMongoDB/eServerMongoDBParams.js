@@ -28,7 +28,7 @@ mongoose.connection.on('open', function() {
 			name: String,
 			description: String,
 			recipeId: Number,
-			ingredients: String,
+			ingredients: [String],
 			rating: Number,
 			sourceUrl: String,
 			imageUrl: String,
@@ -45,21 +45,15 @@ mongoose.connection.on('open', function() {
 	var UsersSchema = new Schema( 
 		{
 			userId: Number,
-			favorites: [ {
-				name: String,
-				description: String,
-				recipeId: Number,
-				ingredients: String,
-				rating: Number,
-				sourceUrl: String,
-				imageUrl: String,
-				attributes: [  {
-					cuisine: String,
-					holiday: String,
-					course: String
-				} ],
-				totalTime: String
-			}]
+			firstName: String,
+			lastName: String,
+			email: String,
+			developer: Boolean,
+			favorites: [ {  
+				recipeId : Number,
+				url: String,
+				name: Sring
+			} ]
 		},
 	   {collection: 'users'}
 	);
@@ -81,21 +75,43 @@ function retrieveRecipeDetails(res, query) {
 	});
 }
 
-function retrieveUsersCount(res, query) {
-	var query = Users.find({recipeId:1}).select('users').count();
-	query.exec(function (err, numberOfUsers) {
-		console.log('number of users: ' + numberOfUsers);
-		res.json(numberOfUsers);
+function retrieveAllUsers(res) {
+	var query = Users.find({});
+	query.exec(function (err, itemArray) {
+		res.json(itemArray);
+	});
+}
+
+function retrieveUserDetails(res, query) {
+	var query = Users.findOne(query);
+	query.exec(function (err, itemArray) {
+		res.json(itemArray);		
 	});
 }
 
 app.use('/', express.static('./public/'));
 app.use('/app/json/', express.static('./app/json'));
 
-app.get('/app/users/:userId/count', function (req, res) {
+app.get('/app/users/', function (req, res) {
+	console.log('Query All Users');
+	retrieveAllUsers(res, {userId: id});
+});
+
+app.get('/app/users/:userId', function (req, res) {
 	var id = req.params.userId;
 	console.log('Query single user with id: ' + id);
-	retrieveUsersCount(res, {userId: id});
+	retrieveUserDetails(res, {userId: id});
+});
+
+app.get('/app/recipes/', function (req, res) {
+	console.log('Query All Users ');
+	retrieveAllRecipes(res, {recipeId: id});
+});
+
+app.get('/app/recipes/:recipeId', function (req, res) {
+	var id = req.params.recipeId;
+	console.log('Query single recipe with id: ' + id);
+	retrieveRecipeDetails(res, {recipeId: id});
 });
 
 app.post('/app/users/', jsonParser, function(req, res) {
@@ -122,17 +138,6 @@ app.post('/app/recipes/', jsonParser, function(req, res) {
 	});
 	res.send(idGenerator.toString());
 	idGenerator++;
-});
-
-app.get('/app/recipes/:recipeId', function (req, res) {
-	var id = req.params.recipeId;
-	console.log('Query single recipe with id: ' + id);
-	retrieveRecipesDetails(res, {recipeId: id});
-});
-
-app.get('/app/recipes/', function (req, res) {
-	console.log('Query All Recipes');
-	retrieveAllRecipes(res);
 });
 
 app.listen(80);
