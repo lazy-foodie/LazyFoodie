@@ -22,18 +22,23 @@ angular
  .config(function ($routeProvider) {
      $routeProvider
        .when('/', {
-           templateUrl: 'modules/core/views/defaultPage.html'
+           templateUrl: 'modules/core/views/defaultPage.html',
+           controller: 'YummlyRecipesCtrl'
        })
-       .when('/recipes/new', {
-           templateUrl: 'modules/recipes/views/recipesView.html',
-           controller: 'RecipesCtrl'
+       .when('/recipes/:recipeId', {
+           templateUrl: 'modules/recipes/views/oneRecipeView.html',
+           controller: 'YummlyRecipesCtrl'
+               })
+       .when('/favRecipes', {
+           templateUrl: 'modules/recipes/views/favoriteRecipesView.html',
+           controller: 'FavortieRecipesCtrl'
        })
-       .when('/recipes', {
-           templateUrl: 'modules/recipes/views/recipesView.html',
-           controller: 'RecipesCtrl'
-       })
-       .when('/users', {
-           templateUrl: 'modules/users/views/profileView.html',
+      .when('/favRecipes/:favoriteId', {
+          templateUrl: 'modules/recipes/views/oneRecipeView.html',
+          controller: 'FavortieRecipesCtrl'
+      })
+       .when('/profile', {
+           templateUrl: 'modules/users/views/profileview.html',
            controller: 'UsersCtrl'
        })
        .otherwise({
