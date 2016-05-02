@@ -11,7 +11,7 @@ usersCollection.insert(
 	favorites: 
 		[ {
 			recipeId: 1,
-			url: "www.cluck.com",
+			url: "http://www.desibucket.com/db2/01/30302/30302-640x512.jpg",
 			name: "Roasted Chicken"
 		} ],
 }
@@ -26,12 +26,12 @@ usersCollection.insert(
 	favorites: 
 		[ {
 			recipeId: 2,
-			url: "www.oink.com",
+			url: "http://www.animalsdb.com/wp-content/uploads/2015/08/Pig-In-Water.jpg", 
 			name: "Roasted Pork"
 		},
 		{
 			recipeId: 3,
-			url: "www.bah.com",
+			url: "http://www.metalsucks.net/wp-content/uploads/2015/07/sheep-redorbit.jpg",
 			name: "Roasted Lamb"
 		} ],
 }
@@ -46,17 +46,17 @@ usersCollection.insert(
 	favorites: 
 		[ {
 			recipeId: 1,
-			url: "www.cluck.com",
+			url: "http://www.desibucket.com/db2/01/30302/30302-640x512.jpg",
 			name: "Roasted Chicken"
 		},
 		{
 			recipeId: 2,
-			url: "www.oink.com",
+			url: "http://www.animalsdb.com/wp-content/uploads/2015/08/Pig-In-Water.jpg",
 			name: "Roasted Pork"
 		},
 		{
 			recipeId: 3,
-			url: "www.bah.com",
+			url: "http://www.metalsucks.net/wp-content/uploads/2015/07/sheep-redorbit.jpg",
 			name: "Roasted Lamb"
 		} ],
 }
@@ -76,10 +76,10 @@ recipesCollection.insert(
 	  	],
 	rating: 100,
 	sourceUrl: "www.getThatChicky.com",
-	imageUrl: "www.cluck.com",
+	imageUrl: "http://www.desibucket.com/db2/01/30302/30302-640x512.jpg",
 	attributes:
 		 [ {
-			cuisine: "Caveman",
+			cuisine: "White Cavemen",
 			holiday: "Every Holiday",
 			course: "Breakfast"
 		} ],		
@@ -90,13 +90,43 @@ recipesCollection.insert(
 {
 	  name: "Roasted Pork",
 	  description: "You roast some pork.",
-	  recipeId: 2
+	  recipeId: 2,
+	  ingredients:
+	  	[
+	  		"Pork",
+	  		"BUTTER"
+	  	],
+	rating: 100,
+	sourceUrl: "www.getThatPiggy.com",
+	imageUrl: "http://www.animalsdb.com/wp-content/uploads/2015/08/Pig-In-Water.jpg",
+	attributes:
+		 [ {
+			cuisine: "French Cavemen",
+			holiday: "Every Holiday",
+			course: "Breakfast"
+		} ],		
+	totalTime: "5 minutes"
 }
 )
 recipesCollection.insert(
 {
 	  name: "Roasted Lamb",
 	  description: "You roast some lamb.",
-	  recipeId: 3
+	  recipeId: 3,
+	  ingredients:
+	  	[
+	  		"Lamb",
+	  		"BUTTER"
+	  	],
+	rating: 100,
+	sourceUrl: "www.getThatLambsy.com",
+	imageUrl: "http://www.metalsucks.net/wp-content/uploads/2015/07/sheep-redorbit.jpg",
+	attributes:
+		 [ {
+			cuisine: "Mediterranean Cavemen",
+			holiday: "Every Holiday",
+			course: "Breakfast"
+		} ],		
+	totalTime: "5 minutes"
 }
 )
