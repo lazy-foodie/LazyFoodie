@@ -1,26 +1,26 @@
-<div class="container" ng-controller='YummlyRecipesCtrl' ng-init='getLists()'>
+<div class="container" ng-controller='YummlyRecipesCtrl' ng-init='getList()'>
     <h3 class="panel-heading">Top 10 Rated Recipes</h3>
 
     <div class="panel panel-default" ng-repeat="result in results">
         <span ng-switch="$index % 4">
             <div class="row" ng-switch-when="0">
                 <div class="col-sm-3">
-                    <a href="#/recipes/{{result.recipeId}}" class="thumbnail">
+                    <a href="#/recipes/{{result.id}}" class="thumbnail">
                         <img title="{{result.name}}" ng-src="{{result.url}}" class="img-responsive">
                     </a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="#/recipes/{{result.recipeId}}" class="thumbnail">
+                    <a href="#/recipes/{{result.id}}" class="thumbnail">
                         <img title="{{result.name}}" ng-src="{{result.url}}" class="img-responsive">
                     </a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="#/recipes/{{result.recipeId}}" class="thumbnail">
+                    <a href="#/recipes/{{result.id}}" class="thumbnail">
                         <img title="{{result.name}}" ng-src="{{result.url}}" class="img-responsive">
                     </a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="#/recipes/{{result.recipeId}}" class="thumbnail">
+                    <a href="#/recipes/{{result.id}}" class="thumbnail">
                         <img title="{{result.name}}" ng-src="{{result.url}}" class="img-responsive">
                     </a>
                 </div>
