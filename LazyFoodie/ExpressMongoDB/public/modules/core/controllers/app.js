@@ -28,7 +28,7 @@ angular
        .when('/recipes/:recipeId', {
            templateUrl: 'modules/recipes/views/oneRecipeView.html',
            controller: 'YummlyRecipesCtrl'
-               })
+        })
        .when('/favRecipes', {
            templateUrl: 'modules/recipes/views/favoriteRecipesView.html',
            controller: 'FavortieRecipesCtrl'
