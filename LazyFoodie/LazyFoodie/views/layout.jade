@@ -23,17 +23,11 @@ html
               a(href='/fav') My Favourite
             li
               a(href='/accountInfo') My Account
-   
-     dropdown("My Dropdown Menu",[
- 	{text:"Bootstrap",url:"http://www.getbootstrap.com"},
- 	{text:"JADE",url:"http://www.jade-lang.com"},
- 	{text:"NodeJS",url:"http://www.nodejs.org"}
-          ] )
     .container.body-content
       block content
       hr
       footer
-        p &copy; #{year} powered by <img src='http://static.yummly.com/api-logo.png'/>
+        p &copy; #{year} powered by<img src='http://static.yummly.com/api-logo.png'/>
 
     script(src='/javascripts/jquery-1.10.2.js')
     script(src='/javascripts/bootstrap.js')
