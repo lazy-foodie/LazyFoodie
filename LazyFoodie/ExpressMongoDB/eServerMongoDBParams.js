@@ -75,7 +75,6 @@ function retrieveRecipeDetails(res, query) {
 	});
 }
 
-
 function retrieveAllUsers(res) {
 	var query = Users.find({});
 	query.exec(function (err, itemArray) {
