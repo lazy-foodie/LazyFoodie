@@ -1,0 +1,18 @@
+{
+  "name": "lazy-foodie",
+  "version": "0.0.0",
+  "description": "LazyFoodie",
+  "main": "app.js",
+  "author": {
+    "name": "bichdiep",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "mongoose": "^4.4.14",
+    "serve-favicon": "^2.3.0",
+    "stylus": "*",
+    "yummly": "0.2.4"
+  }
+}
