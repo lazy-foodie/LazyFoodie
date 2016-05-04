@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+</head>
+	</head>
+<body onload="initXHR()">
+    <div class="container">
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:initXHR('home')">Lazy Foodie</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Home</a></li>
+                        <li><a href="javascript:initXHR('profile')">My Profile</a></li>
+                        <li><a href="javascript:initXHR('favRecipes')">My Favorite Recipes</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="loginview.html">Login</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
+        <div id="home">
+            <!-- Main component for a primary marketing message or call to action -->
+            <div class="jumbotron">
+                <h1>Lazy Foodie</h1>
+                <p>Help you to recycle your food and ingredients</p>
+                <p>
+                    <a class="btn btn-lg btn-primary" href="javascript:initXHR('yummlyRecipes')" role="button">Let's Explore!</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="yummlyRecipes" style="display:none;"> </div>
+        <div id="profile" style="display:none;"> </div>
+        <div id="favRecipes" style="display:none;"> </div>
+
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
