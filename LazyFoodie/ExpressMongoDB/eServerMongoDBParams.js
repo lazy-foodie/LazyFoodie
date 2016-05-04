@@ -13,7 +13,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var Recipes;
 var Users;
 
-var idGenerator = 100;
+var idGeneratorRecipe = 100;
+var idGeneratorUser = 100;
 
 //put config url behind file to hide passwords and username
 var mongoDBConnection = require('./db.RecipeSample.config');
@@ -27,7 +28,7 @@ mongoose.connection.on('open', function() {
 		{
 			name: String,
 			description: String,
-			recipeId: Number,
+			recipeId: String,
 			ingredients: [String],
 			rating: Number,
 			sourceUrl: String,
@@ -50,15 +51,17 @@ mongoose.connection.on('open', function() {
 			email: String,
 			developer: Boolean,
 			favorites: [ {  
-				recipeId : Number,
+				recipeId : String,
 				url: String,
-				name: Sring
+				name: String
 			} ]
 		},
 	   {collection: 'users'}
 	);
-	Tasks = mongoose.model('Users', UsersSchema);
+	Users = mongoose.model('Users', UsersSchema);
 	console.log('models have been created');
+
+	module.exports = ('Users', UsersSchema);
 });
 
 function retrieveAllRecipes(res) {
@@ -117,27 +120,27 @@ app.get('/app/recipes/:recipeId', function (req, res) {
 app.post('/app/users/', jsonParser, function(req, res) {
 	console.log(req.body);
 	var jsonObj = req.body;
-	jsonObj.userId = idGenerator;
+	jsonObj.userId = idGeneratorUser;
 	Users.create([jsonObj], function (err) {
 		if (err) {
 			console.log('object creation failed');
 		}
 	});
-	res.send(idGenerator.toString());
-	idGenerator++;
+	res.send(idGeneratorUser.toString());
+	idGeneratorUser++;
 });
 
 app.post('/app/recipes/', jsonParser, function(req, res) {
 	console.log(req.body);
 	var jsonObj = req.body;
-	jsonObj.recipeId = idGenerator;
-	Users.create([jsonObj], function (err) {
+	jsonObj.recipeId = idGeneratorRecipe;
+	Recipes.create([jsonObj], function (err) {
 		if (err) {
 			console.log('object creation failed');
 		}
 	});
-	res.send(idGenerator.toString());
-	idGenerator++;
+	res.send(idGeneratorRecipe.toString());
+	idGeneratorRecipe++;
 });
 
 app.listen(80);

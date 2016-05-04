@@ -1,6 +1,7 @@
 db = db.getSiblingDB('sampleDB')
 db.createCollection('users')
 usersCollection = db.getCollection("users")
+usersCollection.remove({})
 usersCollection.insert(
 {
 	userId : 1,
@@ -68,7 +69,7 @@ recipesCollection.insert(
 {
 	  name: "Roasted Chicken",
 	  description: "You roast some chicken.",
-	  recipeId: 1,
+	  recipeId: "Roast_Chicky",
 	  ingredients:
 	  	[
 	  		"Chicken",
@@ -90,7 +91,7 @@ recipesCollection.insert(
 {
 	  name: "Roasted Pork",
 	  description: "You roast some pork.",
-	  recipeId: 2,
+	  recipeId: "Roast_Porky",
 	  ingredients:
 	  	[
 	  		"Pork",
@@ -112,7 +113,7 @@ recipesCollection.insert(
 {
 	  name: "Roasted Lamb",
 	  description: "You roast some lamb.",
-	  recipeId: 3,
+	  recipeId: "Roast_Lambsy",
 	  ingredients:
 	  	[
 	  		"Lamb",
