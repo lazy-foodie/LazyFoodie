@@ -23,12 +23,12 @@ angular
      $routeProvider
        .when('/', {
            templateUrl: 'modules/core/views/defaultPage.html',
-           controller: 'YummlyRecipesCtrl'
+           controller: 'yummlyRecipeCtrl'
        })
        .when('/recipes/:recipeId', {
            templateUrl: 'modules/recipes/views/oneRecipeView.html',
-           controller: 'YummlyRecipesCtrl'
-       })
+           controller: 'yummlyRecipeCtrl'
+        })
        .when('/favRecipes', {
            templateUrl: 'modules/recipes/views/favoriteRecipesView.html',
            controller: 'FavortieRecipesCtrl'
@@ -41,10 +41,6 @@ angular
            templateUrl: 'modules/users/views/profileview.html',
            controller: 'UsersCtrl'
        })
-        .when('/login', {
-            templateUrl: 'modules/users/views/loginview.html',
-            controller: 'UsersCtrl'
-        })
        .otherwise({
            redirectTo: '/'
        });
