@@ -74,9 +74,9 @@ function populateListsView(elementId, lists, title) {
         // extracting information 
         var id = lists[i].recipeId;
         var name = lists[i].name;
-        var url = lists[i].url;        
+        var url = lists[i].url;
         // switching to new row when a row is filled with 4 pictures (4 columns)
-        if (i % 4 == 0)         
+        if (i % 4 == 0)
             newElement += "<div class='row'>";
         // filling pictures into columns
         newElement += "<div class='col-sm-3'>";
