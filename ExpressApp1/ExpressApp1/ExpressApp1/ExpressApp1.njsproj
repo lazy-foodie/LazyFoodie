@@ -3,14 +3,14 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>LazyFoodie</Name>
-    <RootNamespace>LazyFoodie</RootNamespace>
+    <Name>ExpressApp1</Name>
+    <RootNamespace>ExpressApp1</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>6098e7d6-1782-4614-92f6-43c152b54f0d</ProjectGuid>
+    <ProjectGuid>8b147246-0856-4e10-8bea-850514466f27</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>app.js</StartupFile>
     <SearchPath>
@@ -31,9 +31,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="createSampleDB.js" />
+    <Compile Include="public\modules\core\controllers\app.js" />
+    <Compile Include="public\modules\core\controllers\yummlyController.js" />
+    <Compile Include="public\modules\recipes\controllers\recipesController.js" />
+    <Compile Include="public\modules\users\controllers\LoginController.js" />
+    <Compile Include="public\modules\users\controllers\RegisterController.js" />
+    <Compile Include="public\modules\users\controllers\usersController.js" />
+    <Compile Include="pages\script.js" />
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\index.html" />
+    <Content Include="app\json\recipes.json" />
+    <Content Include="app\json\responseSample.json" />
+    <Content Include="db.RecipeSample.config" />
+    <Content Include="public\page.html" />
     <Content Include="public\javascripts\bootstrap.js" />
     <Content Include="public\javascripts\bootstrap.min.js" />
     <Content Include="public\javascripts\jquery-1.10.2.intellisense.js" />
@@ -54,61 +67,123 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\javascripts\jquery-1.10.2.min.map" />
-    <Content Include="public\stylesheets\bootstrap.css" />
-    <Content Include="public\stylesheets\bootstrap.min.css" />
-    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="public\modules\core\views\defaultPage.html" />
+    <Content Include="public\modules\recipes\views\favoriteRecipesView.html" />
+    <Content Include="public\modules\recipes\views\oneRecipeView.html" />
+    <Content Include="public\modules\users\views\loginview.html" />
+    <Content Include="public\modules\users\views\profileview.html" />
+    <Content Include="public\modules\users\views\registerview.html" />
+    <Content Include="public\modules\stylesheets\bootstrap.css" />
+    <Content Include="public\modules\stylesheets\bootstrap.min.css" />
+    <Content Include="public\modules\stylesheets\style.styl" />
     <Content Include="README.md" />
+    <Content Include="start.recipeSample.cmd" />
+    <Content Include="startdbClient.toDoSample.cmd" />
+    <Content Include="views\layout.html" />
+    <Content Include="views\login.jade" />
     <Content Include="views\contact.jade" />
     <Content Include="views\about.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config" />
-    <Content Include="bin\ChangeConfig.ps1" />
-    <Content Include="bin\download.ps1" />
-    <Content Include="bin\setup_web.cmd" />
-    <Content Include="bin\node.cmd" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\" />
+    <Folder Include="app\" />
+    <Folder Include="app\json\" />
+    <Folder Include="pages\" />
     <Folder Include="public\" />
     <Folder Include="public\fonts\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
-    <Folder Include="public\stylesheets\" />
+    <Folder Include="public\modules\" />
+    <Folder Include="public\modules\core\" />
+    <Folder Include="public\modules\core\controllers\" />
+    <Folder Include="public\modules\core\views\" />
+    <Folder Include="public\modules\recipes\" />
+    <Folder Include="public\modules\recipes\controllers\" />
+    <Folder Include="public\modules\recipes\views\" />
+    <Folder Include="public\modules\users\" />
+    <Folder Include="public\modules\users\controllers\" />
+    <Folder Include="public\modules\users\views\" />
+    <Folder Include="public\modules\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="typings\" />
+    <Folder Include="typings\body-parser\" />
     <Folder Include="typings\express-serve-static-core\" />
     <Folder Include="typings\express\" />
     <Folder Include="typings\jade\" />
     <Folder Include="typings\mime\" />
+    <Folder Include="typings\mongoose\" />
     <Folder Include="typings\node\" />
     <Folder Include="typings\serve-static\" />
     <Folder Include="typings\stylus\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\jade\jade.d.ts" />
+    <TypeScriptCompile Include="typings\jade\jade.d.ts" />
+    <TypeScriptCompile Include="typings\jade\jade.d.ts" />
+    <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\mime\mime.d.ts" />
     <TypeScriptCompile Include="typings\mime\mime.d.ts" />
     <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
     <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
     <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />

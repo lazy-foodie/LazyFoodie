@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/LazyFoodie/ExpressMongoDB/public/modules/core/controllers/yummlyController.js

@@ -23,12 +23,12 @@ angular
      $routeProvider
        .when('/', {
            templateUrl: 'modules/core/views/defaultPage.html',
-           controller: 'YummlyRecipesCtrl'
+           controller: 'yummlyRecipeCtrl'
        })
        .when('/recipes/:recipeId', {
            templateUrl: 'modules/recipes/views/oneRecipeView.html',
-           controller: 'YummlyRecipesCtrl'
-               })
+           controller: 'yummlyRecipeCtrl'
+        })
        .when('/favRecipes', {
            templateUrl: 'modules/recipes/views/favoriteRecipesView.html',
            controller: 'FavortieRecipesCtrl'
