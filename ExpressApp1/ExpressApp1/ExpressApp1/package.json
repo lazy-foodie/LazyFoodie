@@ -1,0 +1,18 @@
+{
+  "name": "express-app1",
+  "version": "0.0.0",
+  "description": "ExpressApp1",
+  "main": "app.js",
+  "author": {
+    "name": "bichdiep",
+    "email": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "3.4.4",
+    "jade": "*",
+    "mongoose": "^4.4.14",
+    "stylus": "*",
+    "yummly": "^0.2.4"
+  }
+}
