@@ -6,22 +6,22 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "node/node.d.ts": {
-      "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
+      "commit": "494295c731f7ad2adc256246a376a74d79bca1ff"
     },
     "serve-static/serve-static.d.ts": {
-      "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
+      "commit": "494295c731f7ad2adc256246a376a74d79bca1ff"
     },
     "express-serve-static-core/express-serve-static-core.d.ts": {
-      "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
+      "commit": "494295c731f7ad2adc256246a376a74d79bca1ff"
     },
     "jade/jade.d.ts": {
       "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
     },
     "express/express.d.ts": {
-      "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
+      "commit": "494295c731f7ad2adc256246a376a74d79bca1ff"
     },
     "mime/mime.d.ts": {
-      "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
+      "commit": "494295c731f7ad2adc256246a376a74d79bca1ff"
     },
     "stylus/stylus.d.ts": {
       "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
@@ -31,6 +31,9 @@
     },
     "mongoose/mongoose.d.ts": {
       "commit": "73f7bb99692823f1811817f9753a02b57af5305e"
+    },
+    "method-override/method-override.d.ts": {
+      "commit": "494295c731f7ad2adc256246a376a74d79bca1ff"
     }
   }
 }
