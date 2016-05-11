@@ -46,7 +46,6 @@
     <Content Include="app\json\recipes.json" />
     <Content Include="app\json\responseSample.json" />
     <Content Include="db.RecipeSample.config" />
-    <Content Include="public\page.html" />
     <Content Include="public\javascripts\bootstrap.js" />
     <Content Include="public\javascripts\bootstrap.min.js" />
     <Content Include="public\javascripts\jquery-1.10.2.intellisense.js" />
@@ -111,6 +110,7 @@
     <Folder Include="typings\express-serve-static-core\" />
     <Folder Include="typings\express\" />
     <Folder Include="typings\jade\" />
+    <Folder Include="typings\method-override\" />
     <Folder Include="typings\mime\" />
     <Folder Include="typings\mongoose\" />
     <Folder Include="typings\node\" />
@@ -125,6 +125,10 @@
     <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
     <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
     <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
@@ -139,6 +143,8 @@
     <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
@@ -146,6 +152,11 @@
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
     <TypeScriptCompile Include="typings\jade\jade.d.ts" />
+    <TypeScriptCompile Include="typings\jade\jade.d.ts" />
+    <TypeScriptCompile Include="typings\jade\jade.d.ts" />
+    <TypeScriptCompile Include="typings\method-override\method-override.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
     <TypeScriptCompile Include="typings\mime\mime.d.ts" />
     <TypeScriptCompile Include="typings\mime\mime.d.ts" />
     <TypeScriptCompile Include="typings\mime\mime.d.ts" />
@@ -159,6 +170,10 @@
     <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
     <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
     <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\mongoose\mongoose.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
@@ -173,6 +188,8 @@
     <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
     <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
     <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
@@ -180,6 +197,10 @@
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\stylus\stylus.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
